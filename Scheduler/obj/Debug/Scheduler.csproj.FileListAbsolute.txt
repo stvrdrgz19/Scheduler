@@ -1,0 +1,16 @@
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\bin\Debug\Scheduler.exe.config
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\bin\Debug\Scheduler.exe
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\bin\Debug\Scheduler.pdb
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\obj\Debug\Scheduler.csprojAssemblyReference.cache
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\obj\Debug\Scheduler.Properties.Resources.resources
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\obj\Debug\Scheduler.Scheduler.resources
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\obj\Debug\Scheduler.csproj.GenerateResource.cache
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\obj\Debug\Scheduler.csproj.CoreCompileInputs.cache
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\obj\Debug\Scheduler.exe
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\obj\Debug\Scheduler.pdb
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\bin\Debug\Database.db
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\bin\Debug\Dapper.dll
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\bin\Debug\System.Data.SQLite.dll
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\bin\Debug\Dapper.xml
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\bin\Debug\System.Data.SQLite.xml
+C:\Users\stvrd\source\repos\Scheduler\Scheduler\obj\Debug\Scheduler.csproj.CopyComplete
