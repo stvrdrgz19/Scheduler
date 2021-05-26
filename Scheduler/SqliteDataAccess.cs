@@ -33,5 +33,14 @@ namespace Scheduler
 				cnn.Execute("INSERT INTO Appointments (Name, Phone_Number, Address, DateTime) VALUES (@Name, @Phone_Number, @Address, @DateTime)", appointment);
 			}
 		}
+
+		public static void UpdateAppointment(Appointment appointment, string dateTime, int Id)
+		{
+			//this needs to be updated to not use the Appointment class, instead just pass in dateTime and Id
+			using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+			{
+				cnn.Execute("UPDATE Appointments SET DateTime = '" + dateTime + "' WHERE Id = " + Id, appointment);
+			}
+		}
 	}
 }

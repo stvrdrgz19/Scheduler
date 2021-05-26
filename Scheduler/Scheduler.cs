@@ -17,6 +17,9 @@ namespace Scheduler
 			InitializeComponent();
 		}
 
+		private static string dateToUpdate;
+		private static bool isEdit = false;
+
 		private void LoadAppointments()
 		{
 			lvAppointments.Items.Clear();
@@ -68,7 +71,27 @@ namespace Scheduler
 				return;
 			}
 			string dateTime = dtDate.Text + "-" + dtTime.Text;
+			if (cbNotScheduled.Checked)
+			{
+				dateTime = null;
+			}
 			Appointment appointment = new Appointment(tbName.Text, tbPhone.Text, tbAddress.Text, dateTime);
+			if (isEdit)
+			{
+				if (dateToUpdate == dtDate.Text + "-" + dtTime.Text)
+				{
+					string message = "The Date or Time for this Appointment wasn't updated. If you wish save the appointment without setting a date and time please check the \"Not Yet Scheduled\" checkbox and save again.";
+					string caption = "DATE NOT SET";
+					MessageBoxButtons buttons = MessageBoxButtons.OK;
+					MessageBoxIcon icon = MessageBoxIcon.Error;
+					MessageBox.Show(message, caption, buttons, icon);
+					return;
+				}
+				//update this once UpdateAppointment is updated to not use the Appointment class, also create a method to retrieve the Id of the selected Appointment, and pass that in instead of 1
+				SqliteDataAccess.UpdateAppointment(appointment, dateTime, 1);
+				isEdit = false;
+				return;
+			}
 			SqliteDataAccess.SaveAppointment(appointment);
 			tbName.Text = "";
 			tbPhone.Text = "";
@@ -87,6 +110,8 @@ namespace Scheduler
 
 		private void btnEdit_Click(object sender, EventArgs e)
 		{
+			isEdit = true;
+			dateToUpdate = dtDate.Text + "-" + dtTime.Text;
 			//check to make sure there are any rows selected
 			//check if there are multiple listview rows selected, only allow edit if a single row is selected
 			//check if there is already information filled out in the text boxes

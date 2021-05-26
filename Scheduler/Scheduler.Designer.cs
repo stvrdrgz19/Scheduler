@@ -33,9 +33,14 @@
 			this.btnDelete = new System.Windows.Forms.Button();
 			this.btnEdit = new System.Windows.Forms.Button();
 			this.lvAppointments = new System.Windows.Forms.ListView();
+			this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.chPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.chAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.chDateTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
 			this.dtFilter = new System.Windows.Forms.DateTimePicker();
 			this.label1 = new System.Windows.Forms.Label();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
+			this.dtTime = new System.Windows.Forms.DateTimePicker();
 			this.btnSave = new System.Windows.Forms.Button();
 			this.dtDate = new System.Windows.Forms.DateTimePicker();
 			this.tbAddress = new System.Windows.Forms.TextBox();
@@ -45,11 +50,7 @@
 			this.label4 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
-			this.dtTime = new System.Windows.Forms.DateTimePicker();
-			this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.chPhone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.chAddress = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-			this.chDateTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+			this.cbNotScheduled = new System.Windows.Forms.CheckBox();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.SuspendLayout();
@@ -120,6 +121,26 @@
 			this.lvAppointments.UseCompatibleStateImageBehavior = false;
 			this.lvAppointments.View = System.Windows.Forms.View.Details;
 			// 
+			// chName
+			// 
+			this.chName.Text = "Name";
+			this.chName.Width = 150;
+			// 
+			// chPhone
+			// 
+			this.chPhone.Text = "Phone Number";
+			this.chPhone.Width = 130;
+			// 
+			// chAddress
+			// 
+			this.chAddress.Text = "Address";
+			this.chAddress.Width = 300;
+			// 
+			// chDateTime
+			// 
+			this.chDateTime.Text = "DateTime";
+			this.chDateTime.Width = 175;
+			// 
 			// dtFilter
 			// 
 			this.dtFilter.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -141,6 +162,7 @@
 			// 
 			// groupBox2
 			// 
+			this.groupBox2.Controls.Add(this.cbNotScheduled);
 			this.groupBox2.Controls.Add(this.dtTime);
 			this.groupBox2.Controls.Add(this.btnSave);
 			this.groupBox2.Controls.Add(this.dtDate);
@@ -158,6 +180,15 @@
 			this.groupBox2.TabIndex = 1;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Add/Edit Appointments";
+			// 
+			// dtTime
+			// 
+			this.dtTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+			this.dtTime.Location = new System.Drawing.Point(195, 92);
+			this.dtTime.Name = "dtTime";
+			this.dtTime.ShowUpDown = true;
+			this.dtTime.Size = new System.Drawing.Size(85, 20);
+			this.dtTime.TabIndex = 9;
 			// 
 			// btnSave
 			// 
@@ -239,34 +270,18 @@
 			this.label2.TabIndex = 0;
 			this.label2.Text = "Name:";
 			// 
-			// dtTime
+			// cbNotScheduled
 			// 
-			this.dtTime.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-			this.dtTime.Location = new System.Drawing.Point(195, 92);
-			this.dtTime.Name = "dtTime";
-			this.dtTime.ShowUpDown = true;
-			this.dtTime.Size = new System.Drawing.Size(85, 20);
-			this.dtTime.TabIndex = 9;
-			// 
-			// chName
-			// 
-			this.chName.Text = "Name";
-			this.chName.Width = 150;
-			// 
-			// chPhone
-			// 
-			this.chPhone.Text = "Phone Number";
-			this.chPhone.Width = 130;
-			// 
-			// chAddress
-			// 
-			this.chAddress.Text = "Address";
-			this.chAddress.Width = 300;
-			// 
-			// chDateTime
-			// 
-			this.chDateTime.Text = "DateTime";
-			this.chDateTime.Width = 175;
+			this.cbNotScheduled.AutoSize = true;
+			this.cbNotScheduled.Checked = true;
+			this.cbNotScheduled.CheckState = System.Windows.Forms.CheckState.Checked;
+			this.cbNotScheduled.ForeColor = System.Drawing.SystemColors.ControlText;
+			this.cbNotScheduled.Location = new System.Drawing.Point(287, 95);
+			this.cbNotScheduled.Name = "cbNotScheduled";
+			this.cbNotScheduled.Size = new System.Drawing.Size(116, 17);
+			this.cbNotScheduled.TabIndex = 10;
+			this.cbNotScheduled.Text = "Not Yet Scheduled";
+			this.cbNotScheduled.UseVisualStyleBackColor = true;
 			// 
 			// Scheduler
 			// 
@@ -313,6 +328,7 @@
 		private System.Windows.Forms.ColumnHeader chPhone;
 		private System.Windows.Forms.ColumnHeader chAddress;
 		private System.Windows.Forms.ColumnHeader chDateTime;
+		private System.Windows.Forms.CheckBox cbNotScheduled;
 	}
 }
 
